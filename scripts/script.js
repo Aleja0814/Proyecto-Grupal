@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     let img = document.createElement("img");
     img.setAttribute("src", product.img);  
     
-    // Creando etiqueta span
+    //creando contenedor para talla y precio
+     let containerTP= document.createElement("div");
+     
+    
+    // Creando etiqueta para talla y precio
     let talla = document.createElement("span");
     talla.textContent = product.talla;
 
@@ -22,11 +26,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     // Añadiendo las equitas al contenedor
     let button = document.createElement("button");
+    button.textContent = "agregar";
 
     // Añadiendo contenedor a la tabla
     card.appendChild(img);
-    card.appendChild(talla);
-    card.appendChild(price);
+    containerTP.appendChild(talla);
+    containerTP.appendChild(price);
+    card.appendChild(containerTP)
     card.appendChild(button);
 
     table.appendChild(card);

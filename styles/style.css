@@ -26,3 +26,28 @@
     height: 90vh;
     padding-top: 12vh;
   }
+  @media (max-width:800px){
+    .table{
+      display: block;
+      margin: auto;
+      width:80%;
+    }
+  
+    .card{
+     background-color: #cfc219;
+      display:flex ;
+      align-items: center;
+      flex-direction: column;
+      
+      
+    }
+    .card img{
+  
+      width: 100%;
+      
+    }
+    .card > div{
+      display: flex;
+      justify-content: space-around;
+    }
+  }
