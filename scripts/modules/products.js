@@ -2,7 +2,7 @@ export let products = [
   {
     type: "Pantalon",
     img: "./imagenes/pantalon1.jpeg",
-    price: 4000,
+    price: 40000,
     talla: "32 y 34" 
   },
   {
@@ -21,7 +21,7 @@ export let products = [
     type: "Pantalon",
     img: "./imagenes/pantalon4.jpeg",
     price: 40000,
-    talla: " Talla: 32 y 34" 
+    talla: "32 y 34" 
   },
   {
     type: "Pantaloneta",
@@ -51,25 +51,25 @@ export let products = [
     type: "camisa",
     img: "./imagenes/camiseta1.jpeg",
     price: 30000,
-    talla: "S,M y L" 
+    talla: "S, M y L" 
   },
   {
    type: "camisa",
    img: "./imagenes/camiseta2.jpeg",
    price: 30000,
-   talla: "S,M y L" 
+   talla: "S, M y L" 
   },
   {
    type: "camisa",
    img: "./imagenes/camiseta3.jpeg",
    price: 30000,
-   talla: "S,M y L" 
+   talla: "S, M y L" 
   },
   {
    type: "camisa",
    img: "./imagenes/camiseta4.jpeg",
    price: 30000,
-   talla: "S,M y L" 
+   talla: "S, M y L" 
   },
   {
     type: "gorra",
