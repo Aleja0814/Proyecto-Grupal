@@ -1,6 +1,6 @@
 import { products } from "./modules/products.js";
 
-
+// PINTANDO LAS CARTAS DE CADA PRENDA EN LA TABLA
 let table = document.getElementById("table");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +39,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  console.log(table)
 
+})
+
+// MENU DESPLEGABLE DE FILTRAR
+let menuFiltrar = document.getElementById("menu-filtrar");
+
+menuFiltrar.addEventListener("click", ()=> {
+
+  // products.forEach(product => {
+    let optionMenu = document.createElement("img");
+    console.log(optionMenu)
+    // optionMenu.classList.add("menu-filtrar");
+    // optionMenu.textContent = product.type
+    // menuFiltrar.appendChild(optionMenu)
+  // });
+
+
+
+  
 
 })
