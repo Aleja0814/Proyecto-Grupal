@@ -19,25 +19,37 @@
   }
   nav {
     display: flex;
+  
   }
-  .nav  a, div {
+  .nav  a, span {
     color: white;
     text-decoration: none;
     padding-left: 10px;
+    cursor: pointer;
   }
-  .nav > a:hover {
-    color: #cfc219;
-  }
+
   main {
     height: 90vh;
     padding-top: 12vh;
   }
+
 
   @media (max-width:800px){
     body{
       background-color: #cfc219;
     }
 
+    nav {
+      
+      position: relative;
+    }
+    .menu-filtrar{
+      display: none;
+      position: absolute;
+      padding: 10px;
+      background-color: black;
+      color:white 
+    }
     main h1{
       font-family: 'Alfa Slab One', cursive;
       color: white;
@@ -95,6 +107,27 @@
     body{
       background-color: #cfc219;
     }
+    
+    nav {
+      
+      position: relative;
+    }
+    
+    .menu-filtrar{
+      display: none;
+      position: absolute;
+      padding: 10px;
+      background-color: black;
+      color:white 
+    }
+    .nav > a:hover,span:hover {
+      color: #cfc219;
+    }
+    .menu-filtrar > div:hover {
+      color:#cfc219;
+      
+    }
+
 
     main h1{
       font-family: 'Alfa Slab One', cursive;

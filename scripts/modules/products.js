@@ -1,24 +1,24 @@
 export let products = [
   {
-    type: "Pantalon",
+    type: "Pantalón",
     img: "./imagenes/pantalon1.jpeg",
     price: 40000,
     talla: "32 y 34" 
   },
   {
-    type: "Pantalon",
+    type: "Pantalón",
     img: "./imagenes/pantalon2.jpeg",
     price: 40000, 
     talla: "32 y 34" 
   },
   {
-    type: "Pantalon",
+    type: "Pantalón",
     img: "./imagenes/pantalon3.jpeg",
     price: 40000,
     talla: "32 y 34" 
   },
   {
-    type: "Pantalon",
+    type: "Pantalón",
     img: "./imagenes/pantalon4.jpeg",
     price: 40000,
     talla: "32 y 34" 
@@ -48,50 +48,58 @@ export let products = [
     talla: "S y M" 
   },
   {
-    type: "camisa",
+    type: "Camisa",
     img: "./imagenes/camiseta1.jpeg",
     price: 30000,
     talla: "S, M y L" 
   },
   {
-   type: "camisa",
+   type: "Camisa",
    img: "./imagenes/camiseta2.jpeg",
    price: 30000,
    talla: "S, M y L" 
   },
   {
-   type: "camisa",
+   type: "Camisa",
    img: "./imagenes/camiseta3.jpeg",
    price: 30000,
    talla: "S, M y L" 
   },
   {
-   type: "camisa",
+   type: "Camisa",
    img: "./imagenes/camiseta4.jpeg",
    price: 30000,
    talla: "S, M y L" 
   },
   {
-    type: "gorra",
+    type: "Gorra",
     img: "./imagenes/gorra1.jpg",
     price: 45000,
     talla: "Ajustable" 
   },
   {
-   type: "gorra",
+   type: "Gorra",
    img: "./imagenes/gorra2.jpg",
    price: 45000,
    talla: "Ajustable" 
   },
   {
-   type: "gorra",
+   type: "Gorra",
    img: "./imagenes/gorra3.jpg",
    price: 45000,
    talla: "Ajustable" 
   },
   {
-   type: "gorra",
+   type: "Gorra",
    img: "./imagenes/gorra4.jpg",
    price: 45000,
    talla: "Ajustable" 
   }]
+
+
+ export let type=[
+    "Pantalón",
+    "Pantaloneta",
+    "Camisa",
+    "Gorra"
+  ]
