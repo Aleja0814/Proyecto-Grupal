@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'DM Sans', sans-serif;
   }
   /* HEADER */
   header {
@@ -21,10 +22,16 @@
     display: flex;
   
   }
-  .nav  a, span {
+  .nav  a{
     color: white;
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .categoría{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
     cursor: pointer;
   }
 
@@ -120,14 +127,16 @@
       background-color: black;
       color:white 
     }
-    .nav > a:hover,span:hover {
+    .nav > a:hover {
+      color: #cfc219;
+    }
+    .categoría:hover {
       color: #cfc219;
     }
     .menu-filtrar > div:hover {
       color:#cfc219;
       
     }
-
 
     main h1{
       font-family: 'Alfa Slab One', cursive;
@@ -152,7 +161,15 @@
       flex-direction: column;
       padding:15px;
       margin:10px ;
+      transition: 1s;
       
+    }
+    .card:hover{
+      -webkit-transform:scale(1.05);
+      -moz-transform:scale(1.05);
+      -ms-transform:scale(1.05);
+      -o-transform:scale(1.05);
+      transform:scale(1.05);
     }
     .card img{
   
@@ -181,5 +198,6 @@
       cursor: pointer;
       margin-bottom:  40px;
       font-family: 'DM Sans', sans-serif;
+      
     }
   }
