@@ -1,8 +1,6 @@
 import { products, type } from "./modules/products.js";
 
 // PINTANDO LAS CARTAS DE CADA PRENDA EN LA TABLA
-let table = document.getElementById("table");
-
 document.addEventListener("DOMContentLoaded", () => {
 
   products.forEach(product => {
@@ -16,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //creando contenedor para talla y precio
     let containerTP = document.createElement("div");
 
-
     // Creando etiqueta para talla y precio
     let talla = document.createElement("span");
     talla.textContent = "Talla: " + product.talla;
@@ -26,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Añadiendo las equitas al contenedor
     let button = document.createElement("button");
+    button.setAttribute("id", product.id)
     button.textContent = "Agregar";
 
     // Añadiendo contenedor a la tabla
@@ -40,15 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-})
+});
+
+
+
 
 // MENU DESPLEGABLE DE FILTRAR
-// let filtrar = document.getElementById("filtrar");
 let menuFiltrar = document.getElementById("menu-filtrar");
 let filtrar = document.getElementById("filtrar")
 
-
-let openclose = true
+let openclose = true;
 filtrar.addEventListener("click", (e) => {
 
   if (openclose) {
@@ -69,6 +68,25 @@ filtrar.addEventListener("click", (e) => {
     openclose=!openclose
   }
 
+});
 
 
+// BOTON FUNCINAL PARA AÑADIR AL CARRITO
+let table = document.getElementById("table");
+let arrCard = [];
+table.addEventListener("click", (e)=>{
+  let idValueCard = e.target.attributes.id.value;
+  let objCard = products.find(element => element.id == idValueCard);
+
+  const objValidacion = arrCard.find(element => element.id == idValueCard); 
+    arrCard.push(objCard)
+
+
+});
+
+
+// AÑADIENDO ARRAY AL SESSIONSTORAGE 
+table.addEventListener("click", ()=>{
+  sessionStorage.setItem("arrCards", JSON.stringify(arrCard))
 })
+
