@@ -1,74 +1,73 @@
-import { products, type } from "./modules/products.js";
-
-// PINTANDO LAS CARTAS DE CADA PRENDA EN LA TABLA
-let table = document.getElementById("table");
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  products.forEach(product => {
-    // creando contenedor
-    let card = document.createElement("div");
-    card.setAttribute("class", "card");
-    // Creando etiqueta img
-    let img = document.createElement("img");
-    img.setAttribute("src", product.img);
-
-    //creando contenedor para talla y precio
-    let containerTP = document.createElement("div");
-
-
-    // Creando etiqueta para talla y precio
-    let talla = document.createElement("span");
-    talla.textContent = "Talla: " + product.talla;
-
-    let price = document.createElement("span");
-    price.textContent = "Precio: $" + product.price;
-
-    // Añadiendo las equitas al contenedor
-    let button = document.createElement("button");
-    button.textContent = "Agregar";
-
-    // Añadiendo contenedor a la tabla
-    card.appendChild(img);
-    containerTP.appendChild(talla);
-    containerTP.appendChild(price);
-    card.appendChild(containerTP)
-    card.appendChild(button);
-
-    table.appendChild(card);
-
-  });
-
-
-})
+import { menuProductos } from "./modules/menuProductos.js";
+import { products } from "./modules/products.js";
+import { showProduct } from "./modules/showProduct.js";
 
 // MENU DESPLEGABLE DE FILTRAR
-// let filtrar = document.getElementById("filtrar");
-let menuFiltrar = document.getElementById("menu-filtrar");
+let menuFiltrar = document.getElementById("menu-filtrar-inicio");
 let filtrar = document.getElementById("filtrar")
+menuProductos(menuFiltrar, filtrar)
+
+let table = document.getElementById("table");
+let h2 = document.querySelector("h2")
+
+let pantalon = products.filter(item => item.type == "Pantalon")
+let pantaloneta = products.filter(item => item.type == "Pantaloneta")
+let camisa = products.filter(item => item.type == "Camisa")
+let gorra = products.filter(item => item.type == "Gorra")
 
 
-let openclose = true
-filtrar.addEventListener("click", (e) => {
+menuFiltrar.addEventListener("click", (e) => {
+  e.preventDefault()
 
-  if (openclose) {
-    menuFiltrar.innerHTML = ""
-
-    type.forEach(product => {
-      let optionMenu = document.createElement("div")
-      optionMenu.textContent = product
-      menuFiltrar.appendChild(optionMenu)
-
-    })
-    menuFiltrar.style.display = "block"
-    console.log(menuFiltrar)
-    openclose=!openclose
+  if (e.target.classList.value == "Pantalon") {
+    table.innerHTML=""
+    table.style.display = "flex"
+    console.log("pantalon elegido")
+    showProduct(pantalon, table)
+    h2.style.display = "none"
+    
   }
-  else{
-    menuFiltrar.style.display = "none"
-    openclose=!openclose
+  else {
+    table.style.display = "none"
+    if(e.target.classList.value == "Pantaloneta"){
+      table.innerHTML=""
+          table.style.display = "flex"
+          console.log("pantaloneta elegido")
+          showProduct(pantaloneta, table)
+          h2.style.display = "none"
+    }
+    else {
+      table.style.display = "none"
+      if(e.target.classList.value == "Camisa"){
+        table.innerHTML=""
+            table.style.display = "flex"
+            console.log("camisa elegido")
+            showProduct(camisa, table)
+            h2.style.display = "none"
+      }
+      else{
+        table.style.display = "none"
+        if(e.target.classList.value == "Gorra"){
+          table.innerHTML=""
+              table.style.display = "flex"
+              console.log("gorra elegido")
+              showProduct(gorra, table)
+              h2.style.display = "none"
+        }
+      }
+   
   }
-
-
-
+  
+}
 })
+
+
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@
     margin: 0;
     font-family: 'DM Sans', sans-serif;
   }
+
   /* HEADER */
   header {
     height: 10vh;
@@ -36,18 +37,47 @@
   }
 
   main {
-    height: 90vh;
+    height: 100vh;
     padding-top: 12vh;
+    display:flex;
+    flex-direction: column;
+    
+  }
+  main h2{
+    margin: auto;
+  }
+  footer {
+    height: 10vh;
+    width: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3%;
   }
 
+  i{
+
+    color:#cfc219;
+    height: 100%;
+    padding-left: 3%;
+  
+  }
+
+  footer div{
+    color:#cfc219;
+    height: 100%;
+    padding-left: 1%;
+   
+  }
 
   @media (max-width:800px){
     body{
       background-color: #cfc219;
+      height: 100vh;
     }
 
     nav {
-      
       position: relative;
     }
     .menu-filtrar{
@@ -61,58 +91,63 @@
       font-family: 'Alfa Slab One', cursive;
       color: white;
       text-align: center;
-      font-size: 2.5em;
+      font-size: 3.5em;
       border-bottom: 8px double black;
-      
     }
     .table{
       display: block;
       margin: auto;
       width:80%;
+     
     }
   
     .card{
      background-color: black;
      color:white;
-      display:flex ;
+      display: flex;
       align-items: center;
       flex-direction: column;
       padding:15px;
       margin:10px ;
-      
-      
+    
     }
     .card img{
   
       width: 100%;
-      padding-bottom: 10px;
+      height: 60%;
+      padding-bottom: 5%;
       
     }
     .card > div{
       display: flex;
       justify-content: space-around;
       padding-bottom: 10px;
+    
     }
     .card span{
-      padding: 5px;
       font-family: 'DM Sans', sans-serif;
-      font-size: 20px;
+      padding: 10%;
+      
+      font-size: 150%;
     }
     .card button{
       width: 85px;
       height: 35px;
       background-color: #474536;
       color: white;
-      font-size: 20px;
-      font-family: 'DM Sans', sans-serif;
       border-radius: 5px;
+      margin-left: 30%;
+      font-size: 120%;
+      font-family: 'DM Sans', sans-serif;
+      
     }
+    
   }
-
 
   @media (min-width:801px){
     body{
       background-color: #cfc219;
+      height: 100vh;
     }
     
     nav {
@@ -133,7 +168,7 @@
     .categoría:hover {
       color: #cfc219;
     }
-    .menu-filtrar > div:hover {
+    .menu-filtrar  a:hover {
       color:#cfc219;
       
     }
@@ -200,4 +235,6 @@
       font-family: 'DM Sans', sans-serif;
       
     }
+ 
   }
+  
