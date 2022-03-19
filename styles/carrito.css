@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans&display=swap');
-
 * {
-  margin: 0%;
-  padding: 0%;
-  font-family: 'DM Sans', sans-serif;
-}  
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
   /* HEADER */
   header {
     height: 10vh;
@@ -19,18 +18,23 @@
   header > img {
     height: 80%;
   }
-  .nav > a {
+  nav {
+    display: flex;
+  
+  }
+  .nav  a{
     color: white;
     text-decoration: none;
     padding-left: 20px;
+    cursor: pointer;
   }
-  .nav > a:hover {
-    color: #cfc219;
+  .categoría{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    cursor: pointer;
   }
-  main {
-    height: 90vh;
-    padding-top: 12vh;
-  }
+/* MAIN  */
   .main{
     display:flex;
     justify-content: center;
@@ -39,9 +43,12 @@
     flex-direction: column;
     background-color: #cfc219;
   }
+
+  
   h2{
     color: white;
     font-family: 'Alfa Slab One', cursive;
+    margin-bottom: 3%;
   }
 
   tr{
@@ -49,17 +56,251 @@
     border-bottom: 2px solid black;
   }
 table{
-  height: 20vh;
-    width: 60%;
-    padding: 10px;
-    border-collapse: collapse;
-    border-radius: 10px;
+  height: 50vh;
+  width: 90%;
+  padding: 10px;
+  border-collapse: collapse;
+  margin-top: 3%;
+   
 }
 thead{
   background-color: white;
 }
-.title-carrito{
+#title-carrito{
   margin-bottom: 50px;
   font-size: 3em;
   font-family: 'Alfa Slab One', cursive;
 }
+
+main {
+  height: 100vh;
+  padding-top: 12vh;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+
+  @media (max-width:800px){
+    body{
+      background-color: #cfc219;
+      height: 100vh;
+    }
+
+    nav {
+      
+      position: relative;
+    }
+    .menu-filtrar{
+      display: none;
+      position: absolute;
+      padding: 10px;
+      background-color: black;
+      color:white 
+    }
+
+    main h1{
+      font-family: 'Alfa Slab One', cursive;
+      color: white;
+      text-align: center;
+      font-size: 3.5em;
+      border-bottom: 8px double black;
+    }
+
+    .table{
+      display: block;
+      margin: auto;
+      width:80%;
+     
+    }
+  
+    .card{
+      background-color: black;
+      color:white;
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       padding:15px;
+       margin:10px ;
+     
+     }
+     .card img{
+   
+       width: 100%;
+       height: 60%;
+       padding-bottom: 5%;
+       
+     }
+     .card > div{
+       display: flex;
+       justify-content: space-around;
+       padding-bottom: 10px;
+     
+     }
+     .card span{
+       font-family: 'DM Sans', sans-serif;
+       padding: 10%;
+       
+       font-size: 150%;
+     }
+     .card button{
+       width: 85px;
+       height: 35px;
+       background-color: #474536;
+       color: white;
+       border-radius: 5px;
+       margin-left: 30%;
+       font-size: 120%;
+       font-family: 'DM Sans', sans-serif;
+       
+     }
+     footer {
+      height: 10vh;
+      width: 100%;
+      background-color:black;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+    }
+    
+    i{
+      color:#cfc219;
+      height: 100%;
+      padding-left: 3%;
+    }
+    
+    footer div{
+      color:#cfc219;
+      height: 100%;
+      padding-left: 1%;
+     
+    }
+  }
+
+  @media (max-width:801px){
+    body{
+      background-color: #cfc219;
+      height: 100vh;
+    }
+    
+    nav {
+      
+      position: relative;
+    }
+    main h1{
+      font-family: 'Alfa Slab One', cursive;
+      color: white;
+      text-align: center;
+      font-size: 80%;
+      border-bottom: 14px double black;
+      margin-bottom: 180px;
+      
+    }
+    .menu-filtrar{
+      display: none;
+      position: absolute;
+      padding: 10px;
+      background-color: black;
+      color:white 
+    }
+    .nav > a:hover {
+      color: #cfc219;
+    }
+    .categoría:hover {
+      color: #cfc219;
+    }
+    .menu-filtrar  a:hover {
+      color:#cfc219;
+      
+    }
+
+    main h1{
+      font-family: 'Alfa Slab One', cursive;
+      color: white;
+      text-align: center;
+      font-size: 80px;
+      border-bottom: 14px double black;
+      margin-top: 5%;
+      margin-bottom: 1%;
+      
+    }
+    .table{
+      width:80%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+  
+    .card{
+     background-color: black;
+     color:white;
+      width: 20%;
+      align-items: center;
+      flex-direction: column;
+      padding:15px;
+      margin:10px ;
+      transition: 1s;
+      
+    }
+    .card:hover{
+      -webkit-transform:scale(1.05);
+      -moz-transform:scale(1.05);
+      -ms-transform:scale(1.05);
+      -o-transform:scale(1.05);
+      transform:scale(1.05);
+    }
+    .card img{
+  
+      width: 100%;
+      height: 70%;
+      padding-bottom: 30px;
+      
+    }
+    .card > div{
+      display: flex;
+      justify-content: space-around;
+    
+    }
+    .card span{
+      font-family: 'DM Sans', sans-serif;
+      margin-left: 10%;
+    }
+    .card button{
+      width: 65px;
+      height: 25px;
+      background-color: #474536;
+      color: white;
+      border-radius: 5px;
+      margin-top: 15px ;
+      margin-left: 80px;
+      cursor: pointer;
+      margin-bottom:  40px;
+      font-family: 'DM Sans', sans-serif;
+      
+    }
+    footer {
+      height: 10vh;
+      width: 100%;
+      background-color:black;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      
+    }
+    
+    i{
+      color:#cfc219;
+      height: 100%;
+      padding-left: 3%;
+    }
+    
+    footer div{
+      color:#cfc219;
+      height: 100%;
+      padding-left: 1%;
+     
+    }
+
+  }
+ 

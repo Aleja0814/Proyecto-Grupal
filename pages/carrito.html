@@ -4,21 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Medellín Paradise-Comprar</title>
   <link rel="stylesheet" href="../styles/carrito.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
   <header>
     <img src="../imagenes/Logo.jpeg" alt="Medellin-Parasite">
     <nav class="nav">
       <a href="../index.html">Inicio</a>
-      <a href="">Filtrar</a>
-      <a href="./">Tu compra</a>
+      <span id="filtrar">
+        <span class="categoría">Productos</span> 
+        <div class="menu-filtrar"id="menu-filtrar-carrito">
+
+        </div>
+      </span>
+      <a href="./carrito.html">Tu compra</a>
     </nav>
   </header>
   <main class="main">
-    <h2 class="title-carrito">CARRITO DE COMPRAS</h2>
-    <table>
+  
+      <!-- <h1>MEDELLIN PARADISE</h1> -->
+  
+    <h2 id="title-carrito" >CARRITO DE COMPRAS</h2>
+    <table id="tabla">
       <thead>
         <tr>
             <th>#</th>
@@ -31,25 +40,19 @@
       <tbody id="t-body">
         <!-- Pintado desde el javascript -->
       </tbody>
-
     </table>
-    <h2>TOTAL PRODUCTOS</h2>
+    
+    <h2 id="total">TOTAL PRODUCTOS</h2>
+    <div class="table" id="table">
+      <!-- Tabla pintada desde javascript -->
+    </div>
+    <footer>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <div>@MedellinP4radise</div>
+    </footer>
   </main>
-  <script src="../scripts/modules/carrito.js"></script>
+
+ <script src="../scripts/carrito.js" type="module"></script>
 </body>
 </html>
-
-
-
-
-
-        <!-- <tr>
-          <td>1</td>
-          <td>Camiseta</td>
-          <td>1</td>
-          <td>
-            <button>+</button>
-            <button>-</button>
-          </td>
-          <td>$40000</td>
-        </tr> -->
