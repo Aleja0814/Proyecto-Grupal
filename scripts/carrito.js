@@ -3,6 +3,7 @@ import { menuFiltrarCarrito } from "./modules/menuFiltrar.js";
 import { menuProductos } from "./modules/menuProductos.js";
 import { addProductos } from "./modules/addProducts.js" 
 import { counterTable } from "./modules/counterTable.js";
+import { addCarrito } from "./modules/addCarrito.js"
 
 
 let table = document.getElementById("table");
@@ -14,9 +15,9 @@ menuProductos(menuFiltrar, filtrar)
 
 let titulo = document.getElementById("title-carrito")
 let total = document.getElementById("total")
-let tabla = document.querySelector("table")
+let tableCarrito = document.querySelector("table")
 // SIRVE PARA MOSTRAR LA TABLA DE PRODUCTOS UBICADO EN EL MAIN
-menuFiltrarCarrito(menuFiltrar, table, titulo, total, tabla)
+menuFiltrarCarrito(menuFiltrar, table, titulo, total, tableCarrito)
 
 
 // CODIGO DE PABLO 
@@ -24,28 +25,10 @@ let tBody = document.getElementById("t-body");
 // FUNCION DONDE PIDO INFORMACION DEL SESSIONSTORAGE PARA PINTAR LA TABLA 
 addProductos(tBody)
 
-
+// SIRVE PARA DARLE FUNCIONALIDAD A LOS BOTONES DE + Y - EN EL CARRITO
 counterTable(tBody)
-// tBody.addEventListener("click", (e)=>{
-//   let counter = Number(e.path[2].cells[2].innerText); 
-//   // let resultCounter = counter + 
-//   // Capturando id del td cantidad dando click en los botones de sumar o restar
-//   const signRow = e.path[2].cells[2].attributes.id.value;
 
-//   // Capturando la etiqueta td cantidad 
-//   let tdCantidad = document.getElementById(signRow);
-
-//   // Capturando el + o el - 
-//   let sign = e.target.innerText;
-
-//   // Si da en el boton + suma, si da en el boton - resta 
-//   if(sign == "+") {
-//     counter += 1;
-//     tdCantidad.innerHTML = counter
-//   } else if(sign == "-" && counter > 1) {
-//     counter -= 1;
-//     tdCantidad.innerHTML = counter
-//   }
-
-  
-// })
+let arrCard = [];
+let cardNoRepeat = [];
+// GUARDANDO INFORMACION EN EL SESSIONSTORAGE PARA LUEGO AÑADIR AL CARRITO 
+addCarrito(arrCard, cardNoRepeat, table)

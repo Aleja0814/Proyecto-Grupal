@@ -47,7 +47,7 @@ export const menuFiltrar = (menuFiltrar, table, h2)=>{
 };
 
 // MENU FILTRAR DEL CARRITO 
-export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tabla)=>{
+export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tableCarrito)=>{
   menuFiltrar.addEventListener("click", (e) => {
 
     if (e.target.classList.value == "Pantalon") {
@@ -57,7 +57,7 @@ export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tabla)=>{
       showProduct(pantalon, table)
       titulo.style.display = "none"
       total.style.display = "none"
-      tabla.style.display = "none"
+      tableCarrito.style.display = "none"
   
     }
     else {
@@ -69,7 +69,7 @@ export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tabla)=>{
         showProduct(pantaloneta, table)
         titulo.style.display = "none"
         total.style.display = "none"
-        tabla.style.display = "none"
+        tableCarrito.style.display = "none"
       }
       else {
         table.style.display = "none"
@@ -80,7 +80,7 @@ export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tabla)=>{
           showProduct(camisa, table)
           titulo.style.display = "none"
           total.style.display = "none"
-          tabla.style.display = "none"
+          tableCarrito.style.display = "none"
         }
         else {
           table.style.display = "none"
@@ -91,7 +91,7 @@ export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tabla)=>{
             showProduct(gorra, table)
             titulo.style.display = "none"
             total.style.display = "none"
-            tabla.style.display = "none"
+            tableCarrito.style.display = "none"
           }
         }
   

@@ -15,7 +15,6 @@ table.addEventListener("click", (e)=>{
       cardNoRepeat.push(noRepeat)
     }
   }
-  console.log(counterInicio)
   
   loadStorage(cardNoRepeat)
     
