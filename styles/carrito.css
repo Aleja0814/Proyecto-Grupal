@@ -108,21 +108,23 @@ main {
     }
 
     .table{
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
       margin: auto;
       width:80%;
-     
     }
   
     .card{
       background-color: black;
       color:white;
-       display: flex;
-       align-items: center;
-       flex-direction: column;
-       padding:15px;
-       margin:10px ;
-     
+      height: 450px;
+      width: 20%;
+      align-items: center;
+      flex-direction: column;
+      padding:15px;
+      margin:10px ;
+      transition: 1s;
+      display: inline-block
      }
      .card img{
    
@@ -226,10 +228,10 @@ main {
       
     }
     .table{
-      width:80%;
       display: flex;
       flex-wrap: wrap;
       margin: auto;
+      width:80%;
     }
   
     .card{

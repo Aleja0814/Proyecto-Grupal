@@ -118,5 +118,5 @@ export let type = [
   "Pantalon",
   "Pantaloneta",
   "Camisa",
-  "Gorra"
+  "Gorra", 
 ]
