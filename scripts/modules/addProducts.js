@@ -1,6 +1,6 @@
 export const addProductos = (tBody)=>{
-  
-document.addEventListener("DOMContentLoaded", ()=>{
+  const carritoModal = document.getElementById("carrito-modal");
+  carritoModal.addEventListener("click", ()=>{
 
   let arrCards = JSON.parse(sessionStorage.getItem("cardNoRepeat"))
 
@@ -9,9 +9,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // Creando tr 
     const rowCarrito = document.createElement("tr");
 
-    // Creando tds de #
-    const tdNum = document.createElement("td");
-    tdNum.textContent = index + 1;
+    // Creando tds de imagen
+    const tdImg = document.createElement("td");
+    const imgCarrito = document.createElement("img");
+    imgCarrito.setAttribute("src", element.img);
+    tdImg.appendChild(imgCarrito)
+    
 
     // Crando tds de Item
     const tdProduct = document.createElement("td");
@@ -37,7 +40,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     tdPrecio.textContent = element.price;
 
     // Añadiendo todos los td al tr 
-    rowCarrito.appendChild(tdNum);
+    rowCarrito.appendChild(tdImg);
     rowCarrito.appendChild(tdProduct);
     rowCarrito.appendChild(tdCantidad);
     rowCarrito.appendChild(tdButtons);
