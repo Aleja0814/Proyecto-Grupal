@@ -1,12 +1,17 @@
-import { products } from "./products.js";
+import { addProductos } from "./addProducts.js";
+import { getData } from "./fakeApi.js";
 
-export const addCarrito = (arrCard, cardNoRepeat, table)=>{
+export const addCarrito =   (arrCard, cardNoRepeat, table)=>{
 
-table.addEventListener("click", (e)=>{
+table.addEventListener("click",  async (e)=>{
   // let counter = Number(e.path[2].cells[2].innerText); 
+
+ let products =  await getData("http://localhost:4000/productos")
+ console.log(products)
+
   let idValueCard = e.target.attributes.id.value;
   let objCard = products.find(element => element.id == idValueCard);
-  arrCard.push(objCard);
+  
 
   // Sacando los elementos repetidos de arrCard
   for(let i = 0; i < arrCard.length; i++) {

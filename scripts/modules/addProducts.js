@@ -1,8 +1,11 @@
-export const addProductos = (tBody)=>{
+export const addProductos =  (tBody)=>{
   const carritoModal = document.getElementById("carrito-modal");
-  carritoModal.addEventListener("click", ()=>{
+  carritoModal.addEventListener("click", async ()=>{
 
-  let arrCards = JSON.parse(sessionStorage.getItem("cardNoRepeat"))
+
+    let response =  await fetch("http://localhost:4000/productos");
+    let products =  await response.json();
+    let arrCards = products
 
   // arrCards.filter(element => element.id !== )
   arrCards.forEach((element, index) => {

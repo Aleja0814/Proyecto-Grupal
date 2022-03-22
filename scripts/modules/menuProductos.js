@@ -1,4 +1,9 @@
-import { type } from "./products.js"
+ let type = [
+  "Pantalon",
+  "Pantaloneta",
+  "Camisa",
+  "Gorra", 
+]
 
 export let menuProductos=(menuFiltrar,filtrar)=>{
     let openclose = true

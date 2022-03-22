@@ -5,6 +5,7 @@ import { menuFiltrarCarrito } from "./modules/menuFiltrar.js";
 import { addProductos } from "./modules/addProducts.js" 
 import { counterTable } from "./modules/counterTable.js";
 
+
 // SIRVE PARA DESPLEGAR EL MENU PRODUCTOS UBICADO EN EL HEADER
 let menuFiltrarInicio = document.getElementById("menu-filtrar-inicio");
 let filtrar = document.getElementById("filtrar");
@@ -45,3 +46,4 @@ counterTable(tBody)
     modal.style.display = "none"
 
   })
+  
