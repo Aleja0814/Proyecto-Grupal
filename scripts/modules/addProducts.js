@@ -32,12 +32,12 @@ export const addProductos = (tBody)=>{
     tdButtons.appendChild(buttonSum);
     tdButtons.appendChild(buttonRes);
     buttonSum.textContent = "+";
-    buttonRes.textContent = "-";
+      buttonRes.textContent = "-";
 
     // Creando tds  de Total
     const tdPrecio = document.createElement("td");
     tdPrecio.setAttribute("id", `precio${index + 1}`)
-    tdPrecio.textContent = element.price;
+    tdPrecio.textContent = "$"+element.price;
 
     // Añadiendo todos los td al tr 
     rowCarrito.appendChild(tdImg);
