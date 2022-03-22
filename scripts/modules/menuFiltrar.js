@@ -101,4 +101,3 @@ export const menuFiltrarCarrito = (menuFiltrar, table, titulo, total, tableCarri
   })
   
 }
-

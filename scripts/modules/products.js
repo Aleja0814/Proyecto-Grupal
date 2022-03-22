@@ -113,7 +113,6 @@ export let products = [
   }
 ];
 
-
 export let type = [
   "Pantalon",
   "Pantaloneta",

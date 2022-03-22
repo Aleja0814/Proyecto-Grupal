@@ -1,7 +1,8 @@
 import { menuProductos } from "./modules/menuProductos.js";
 import { menuFiltrar } from "./modules/menuFiltrar.js";
 import { addCarrito } from "./modules/addCarrito.js";
-import { addProductos } from "./modules/addProducts.js"
+import { menuFiltrarCarrito } from "./modules/menuFiltrar.js";
+import { addProductos } from "./modules/addProducts.js" 
 import { counterTable } from "./modules/counterTable.js";
 
 // SIRVE PARA DESPLEGAR EL MENU PRODUCTOS UBICADO EN EL HEADER
@@ -26,21 +27,21 @@ addProductos(tBody)
 // SIRVE PARA DARLE FUNCIONALIDAD A LOS BOTONES DE + Y - EN EL CARRITO
 counterTable(tBody)
 
-// MODAL
-const carritoModal = document.getElementById("carrito-modal");
-carritoModal.addEventListener("click", () => {
-  let modal = document.getElementById("modal");
-  modal.style.display = "block";
+  // MODAL
+  const carritoModal = document.getElementById("carrito-modal");
+  carritoModal.addEventListener("click", ()=>{
+    let modal = document.getElementById("modal");
+    modal.style.display = "block";
 
-})
-
+  })
+  
 
 // CERRAR MODAL 
-const cerrarModal = document.getElementById("cerrar-modal");
+  const cerrarModal = document.getElementById("cerrar-modal");
 
-cerrarModal.addEventListener("click", () => {
+  cerrarModal.addEventListener("click", ()=>{
 
-  let modal = document.getElementById("modal");
-  modal.style.display = "none"
+    let modal = document.getElementById("modal");
+    modal.style.display = "none"
 
-})
+  })
