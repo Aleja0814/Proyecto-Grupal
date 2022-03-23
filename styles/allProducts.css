@@ -1,40 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans&display=swap');
 * {
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    width: 100%;
-    position: relative;
-    padding-bottom: 100px ;
-    min-height: 100vh;
-  }
-  /* HEADER */
-  .headerNav {
-    height: 10vh;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    font-family: 'DM Sans', sans-serif;
-    z-index: 9;
-  }
-  .headerNav > img {
-    height: 80%;
-  }
-  nav {
-    display: flex;
-  }
-  .nav  a {
-    color: white;
-    text-decoration: none;
-    padding-left: 20px;
-    cursor: pointer;
-    
-  }
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100px ;
+  min-height: 100vh;
+}
+/* HEADER */
+.headerNav {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  font-family: 'DM Sans', sans-serif;
+  z-index: 9;
+  top:0
+}
+.headerNav > img {
+  height: 80%;
+}
 /* escondiendo boton agg, span "en el carrito", el contador y estilizando la tabla */
 .containerTable{
 width: 90%;
@@ -57,16 +48,13 @@ margin-left: 90px;
   .counterValue{
     display: none;
   }
-  
   .container-back a{
     display: inline-block;
-    color:  #cfc219;
+    color: white;
     text-decoration: none;
-    width: 64px;
+    width: 100px;
   }
-  .container-back i{
-    display: inline-block;
-  }
+
   
   footer {
     height: 10vh;
@@ -102,20 +90,7 @@ margin-left: 90px;
     nav {
       position: relative;
     }
-    .menu-filtrar{
-      display: none;
-      position: absolute;
-      padding: 10px;
-      background-color: black;
-      color:white 
-    }
-    main h1{
-      font-family: 'Alfa Slab One', cursive;
-      color: white;
-      text-align: center;
-      font-size: 3.5em;
-      border-bottom: 8px double black;
-    }
+
     .table{
       display: block;
       margin: auto;
@@ -144,8 +119,7 @@ margin-left: 90px;
       
     }
     .card > div {
-      /* display: flex;
-      justify-content: space-around; */
+
       padding-bottom: 10px;
       display: grid;
       grid-template-columns: 1fr;
@@ -174,42 +148,21 @@ margin-left: 90px;
   @media (min-width:801px){
     body{
       background-color: #cfc219;
-      /* height: 100vh; */
-    }
+      }
     
     nav {
       
       position: relative;
-    }
-    
-    .menu-filtrar{
-      display: none;
-      position: absolute;
-      padding: 10px;
-      background-color: black;
-      color:white 
-    }
-    .nav > a:hover {
-      color: #cfc219;
-    }
-    .categoría:hover {
-      color: #cfc219;
-    }
-    .menu-filtrar  a:hover {
-      color:#cfc219; 
-    }
-    #carrito-modal:hover{
-      color: #cfc219;
-    }
-    main h1{
-      font-family: 'Alfa Slab One', cursive;
+    } 
+    .container-back a{
+      display: inline-block;
       color: white;
-      text-align: center;
-      font-size: 80px;
-      border-bottom: 14px double black;
-      
+      text-decoration: none;
+      width: 100px;
     }
-    
+    .container-back a:hover{
+      color:  #cfc219;
+    }
   
     .card {
       background-color: black;

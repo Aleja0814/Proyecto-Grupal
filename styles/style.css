@@ -121,6 +121,18 @@
   .header-modal > span:hover {
     color: red;
   }
+  .contacto{
+    text-decoration: none;
+    background-color: #cfc219;
+    color:white;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding: 1%;
+    border-radius: 20px;
+    font-size: 120%;
+
+
+  }
 
 
 /* MAIN  */
@@ -128,14 +140,14 @@
     display:flex;
     flex-direction: column;
      font-family: 'DM Sans', sans-serif;
-    
+   
   }
   main h2 {
     margin: auto;
   }
-  .card {
+  /* .card {
 
-  }
+  } */
   .counter-card {
     height: 60px;
     width: 60px;
@@ -231,6 +243,7 @@
       
     }
     .card > div {
+
       padding-bottom: 10px;
       display: grid;
       grid-template-columns: 1fr;
