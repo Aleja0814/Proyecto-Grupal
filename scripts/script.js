@@ -12,17 +12,17 @@ menuProductos(menuFiltrarInicio, filtrar);
 
 // SIRVE PARA MOSTRAR LA TABLA DE PRODUCTOS UBICADO EN EL MAIN
 let table = document.getElementById("table");
-let h2 = document.querySelector("h2");
-menuFiltrar(menuFiltrarInicio, table, h2)
+let picturesMedellin = document.getElementById("pictures-medellin");
+menuFiltrar(menuFiltrarInicio, table, picturesMedellin)
 
 // GUARDANDO INFORMACION EN EL SESSIONSTORAGE PARA LUEGO AÑADIR AL CARRITO 
+let tBody = document.getElementById("t-body");
 let arrCard = [];
 let cardNoRepeat = [];
-addCarrito(arrCard, cardNoRepeat, table)
+addCarrito(arrCard, cardNoRepeat, table, tBody)
 
 // FUNCION DONDE PIDO INFORMACION DEL SESSIONSTORAGE PARA PINTAR LA TABLA 
-let tBody = document.getElementById("t-body");
-addProductos(tBody)
+// addProductos(tBody, table)
 
 // SIRVE PARA DARLE FUNCIONALIDAD A LOS BOTONES DE + Y - EN EL CARRITO
 counterTable(tBody)

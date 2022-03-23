@@ -1,32 +1,44 @@
+import { addProductos } from "./addProducts.js";
 import { products } from "./products.js";
 
-export const addCarrito = (arrCard, cardNoRepeat, table)=>{
+export const addCarrito = (arrCard, cardNoRepeat, table, tBody)=>{
+  // Escuchando el click en el boton de la carta por medio de la tabla (mala practica)
   table.addEventListener("click", (e)=>{
+
+    // let tdCantidad = e.path[3].childNodes[3].childNodes[1].childNodes[7].childNodes[1].childNodes;
     // capturando contador ubicado en la tarjeta
     const counterSpan = e.path[1].childNodes[1].childNodes[2].childNodes[1];
-    // const counterString = e.path[1].childNodes[1].childNodes[2].childNodes[1].innerText;
-  const counterValue = Number(counterSpan.innerText)
-  console.log(typeof(counterValue))
-  
-  let idValueCard = e.target.attributes.id.value;
-  let objCard = products.find(element => element.id == idValueCard);
-  arrCard.push(objCard);
+    const counterValue = Number(counterSpan.innerText)
+    
+    let idValueCard = e.target.attributes.id.value;
+    let objCard = products.find(element => element.id == idValueCard);
+    arrCard.push(objCard);
+    
+    // Sacando los elementos repetidos de arrCard
+    for(let i = 0; i < arrCard.length; i++) {
+      const noRepeat = arrCard[i];
+      if(!cardNoRepeat.includes(arrCard[i])) {
+        cardNoRepeat.push(noRepeat);    
+      } 
+      
+    }
+    loadStorage(cardNoRepeat)
 
-  // Sacando los elementos repetidos de arrCard
-  for(let i = 0; i < arrCard.length; i++) {
-    const noRepeat = arrCard[i];
-    if(!cardNoRepeat.includes(arrCard[i])) {
-      cardNoRepeat.push(noRepeat);    
-    } 
-    
-  }
+    addProductos(tBody, counterValue)
+
+
+    // let tdCantidad = document.getElementById(`counter-${objCard.id}`)
+    // tdCantidad.innerHTML = counterValue + 1
+
+    // Añadiendo una unidad al contador en cada click
+    counterSpan.innerHTML = counterValue + 1;
+    // .innerHTML = counterValue + 1;
+    // console.log(tdCantidad)
+
   
-  // Añadiendo una unidad al contador en cada click
-  counterSpan.innerHTML = counterValue + 1
-  
-  loadStorage(cardNoRepeat)
+    // loadStorage(cardNoRepeat)
     
-})
+  })
 
 };
 

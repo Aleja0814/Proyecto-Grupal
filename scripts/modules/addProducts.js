@@ -1,8 +1,10 @@
-export const addProductos = (tBody)=>{
+export const addProductos = (tBody, counterValue)=>{
+  console.log(counterValue)
   const carritoModal = document.getElementById("carrito-modal");
-  carritoModal.addEventListener("click", ()=>{
+
     tBody.innerHTML = ""
   let arrCards = JSON.parse(sessionStorage.getItem("cardNoRepeat"))
+  // console.log(arrCards)
 
   // arrCards.filter(element => element.id !== )
   arrCards.forEach((element, index) => {
@@ -21,9 +23,8 @@ export const addProductos = (tBody)=>{
     tdProduct.textContent = `${element.type} de talla ${element.talla}`;
 
     // creando tds de Cantidad 
-    const tdCantidad = document.createElement("td");
-    tdCantidad.setAttribute("id", index + 1);
-    tdCantidad.textContent = 1;
+    const tdCantidad = document.createElement("td"); 
+    tdCantidad.setAttribute("id", `counter-${element.id}`);
 
     // Creando tds de Acción
     const tdButtons = document.createElement("td");
@@ -50,5 +51,5 @@ export const addProductos = (tBody)=>{
     tBody.appendChild(rowCarrito)
 
   });
-});
+
 }

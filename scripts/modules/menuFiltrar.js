@@ -5,16 +5,16 @@ let pantalon = products.filter(item => item.type == "Pantalon");
 let pantaloneta = products.filter(item => item.type == "Pantaloneta");
 let camisa = products.filter(item => item.type == "Camisa");
 let gorra = products.filter(item => item.type == "Gorra");
-export const menuFiltrar = (menuFiltrar, table, h2)=>{
-
+export const menuFiltrar = (menuFiltrar, table, picturesMedellin)=>{
 
 // MENU FILTRAR DEL INICIO 
   menuFiltrar.addEventListener("click", (e) => {
 
     if (e.target.classList.value == "Pantalon") {
       table.innerHTML="";
-      table.style.display = "block"
-      showProduct(pantalon, table)
+      table.style.display = "block";
+      showProduct(pantalon, table);
+      picturesMedellin.style.display = "none"
 
     } else {
       table.style.display = "none"
@@ -22,6 +22,7 @@ export const menuFiltrar = (menuFiltrar, table, h2)=>{
         table.innerHTML=""
         table.style.display = "block"
         showProduct(pantaloneta, table)
+        picturesMedellin.style.display = "none"
   
       } else {
         table.style.display = "none"
@@ -29,6 +30,7 @@ export const menuFiltrar = (menuFiltrar, table, h2)=>{
           table.innerHTML=""
           table.style.display = "block"
           showProduct(camisa, table)
+          picturesMedellin.style.display = "none"
     
         } else{
           table.style.display = "none"
@@ -36,6 +38,7 @@ export const menuFiltrar = (menuFiltrar, table, h2)=>{
             table.innerHTML=""
             table.style.display = "block"
             showProduct(gorra, table)
+            picturesMedellin.style.display = "none"
       
           }
         }

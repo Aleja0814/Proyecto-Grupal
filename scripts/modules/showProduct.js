@@ -2,7 +2,7 @@
 export let showProduct = (product,container)=>{
     
     
-   product.forEach(item=>{
+   product.forEach((item, index)=>{
        let {img,price,talla, id}=item
       // creando contenedor
       const card = document.createElement("div");
@@ -16,12 +16,13 @@ export let showProduct = (product,container)=>{
       const containerTP = document.createElement("div");
    
       // Creando etiqueta para talla, precio y cantidad
+      // talla 
       const tallaje = document.createElement("span");
       tallaje.textContent = "Talla: " + talla;
-      
+      // precio 
       const precio = document.createElement("span");
       precio.textContent = "Precio: $" + price;
-
+      // cantidad
       const containerCounter = document.createElement("div");
       const counterText = document.createElement("span");
       counterText.textContent = `En el carrito: `;
@@ -48,6 +49,6 @@ export let showProduct = (product,container)=>{
 
       card.appendChild(button);
       container.appendChild(card);
-      
+
    })
    };
