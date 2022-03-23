@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Sans&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+  body {
+    width: 100%;
+    position: relative;
+    padding-bottom: 100px ;
+    min-height: 100vh;
+    
+}
+  /* HEADER */
+
+  .headerNav {
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    font-family: 'DM Sans', sans-serif;
+    z-index: 9;
+    top:0
+  }
+  .headerNav > img {
+    height: 80%;
+  }
+  nav {
+    display: flex;
+  }
+  .nav  a {
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    cursor: pointer;
+    
+  }
+
+  .logo img{
+      width: 100px;
+      height: 100px;
+  }
+  .logo{
+      border-radius: 25% ;
+      background-color: black;
+      border: 2px solid #cfc219;
+  }
+
+  
+  .container-back a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+  }
+
+  .container-back i{
+    display: inline-block;
+  }
+  
+  footer {
+    height: 10vh;
+    width: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+    position: absolute;
+    bottom: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  i {
+    color:#cfc219;
+    padding-left: 3%;
+  
+  }
+
+  footer div {
+    color:#cfc219;
+    padding-left: 1%;
+    font-size: 1.3em;
+  }
+  @media (max-width:800px){
+    /* body {
+      background-color: #cfc219;
+    } */
+
+    nav {
+      position: relative;
+    }
+    .logo img{
+        width: 5vw;
+        height: 10vh;
+    }
+    .logo{
+        border-radius: 25% ;
+        background-color: black;
+        border: 2px solid #cfc219;
+    }
+  
+    .container-back a{
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      width: 100px;
+    }
+  }
+
+  @media (min-width:801px){
+   /* body {
+      background-color: #cfc219;
+     
+    } */
+    nav {
+        position: relative;
+      }
+      .logo img{
+        width: 100px;
+        height: 100px;
+    }
+    .logo{
+        border-radius: 25% ;
+        background-color: black;
+        border: 2px solid #cfc219;
+    }
+  
+    .container-back a{
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      width: 100px;
+    }
+    .container-back a:hover{
+      color:  #cfc219;
+    }
+    .container-back i{
+      display: inline-block;
+    }
+    
+
+  }
+  
+
+
+
