@@ -23,7 +23,10 @@ body {
   z-index: 9;
   top:0
 }
-.headerNav > img {
+.headerNav > a {
+  height: 100%;
+}
+.headerNav > a > img {
   height: 80%;
 }
 /* escondiendo boton agg, span "en el carrito", el contador y estilizando la tabla */

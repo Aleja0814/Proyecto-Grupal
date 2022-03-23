@@ -21,7 +21,10 @@
     font-family: 'DM Sans', sans-serif;
     z-index: 9;
   }
-  .headerNav > img {
+  .headerNav > a {
+    height: 100%;
+  }
+  .headerNav > a > img {
     height: 80%;
   }
   nav {

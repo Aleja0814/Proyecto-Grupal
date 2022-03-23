@@ -6,6 +6,7 @@ export const addCarrito = (cardNoRepeat, table, tBody) => {
   // Escuchando el click en el boton de la carta por medio de la tabla (mala practica)
   table.addEventListener("click", async (e)=>{
     // let products = await fakeApi("http://localhost:4000/productos")
+    // console.log(products)
     // capturando contador ubicado en la tarjeta
     const counterSpan = e.path[1].childNodes[1].childNodes[2].childNodes[1];
 
@@ -17,7 +18,6 @@ export const addCarrito = (cardNoRepeat, table, tBody) => {
     let objCard = products.find(element => `counter-card-${element.id}` == idCounterCard);
 
     // Sacando los elementos repetidos de arrCard
-
     if(!cardNoRepeat.includes(objCard) || cardNoRepeat.length === 0) {
       cardNoRepeat.push(objCard);
       counterValue = Number(counterSpan.innerText) + 1

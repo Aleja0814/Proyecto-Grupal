@@ -14,9 +14,11 @@
 
 </head>
 
-<body class="bg-warning">
+<body style="background-color: #cfc219;">
     <header class="headerNav">
-        <img src="https://i.ibb.co/4ZxfbB9/Logo.jpg" alt="Medellin-Paradise">
+        <a href="../index.html">
+            <img src="https://i.ibb.co/4ZxfbB9/Logo.jpg" alt="Medellin-Paradise">
+        </a>
         <div class="container-back"> <a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Volver</a></div>
     </header>
 
@@ -29,7 +31,12 @@
                     <div class="mt-5">
                         <input id="email" type="email" class="form-control my-5" placeholder="Correo Electrónico" required>
                         <input id="name"type="text" class="form-control my-5" placeholder="Nombre" required>
-                        <input id="number"type="number" class="form-control my-5" placeholder="Celular" required>
+                        <input id="number"type="tel" class="form-control my-5" placeholder="Celular" required>
+                        <input type="number" placeholder="No. de tarjeta" class="form-control my-5" required>
+                        <div class="d-flex">
+                            <input type="text" class="form-control my-5 w-50" placeholder="F.Vencimiento MM/AA" required>
+                            <input type="number" class="form-control my-5 w-25 mx-5" placeholder="CVV" required>
+                        </div>
                     </div>
                     <div class='mt-5'>
                         <center>
@@ -42,8 +49,12 @@
   
     <!-- FOOTER -->
     <footer>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-facebook"></i>
+        <a href="https://www.instagram.com/medellinp4radise/?utm_medium=copy_link" target="_blank">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="">
+            <i class="bi bi-facebook"></i>
+        </a>
         <div>@MedellinP4radise</div>
     </footer>
     <script src="../scripts/form.js"></script>
