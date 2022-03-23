@@ -1,7 +1,7 @@
 export const addProductos = (tBody)=>{
   const carritoModal = document.getElementById("carrito-modal");
   carritoModal.addEventListener("click", ()=>{
-
+    tBody.innerHTML = ""
   let arrCards = JSON.parse(sessionStorage.getItem("cardNoRepeat"))
 
   // arrCards.filter(element => element.id !== )

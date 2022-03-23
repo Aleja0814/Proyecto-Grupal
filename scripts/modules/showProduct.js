@@ -4,34 +4,50 @@ export let showProduct = (product,container)=>{
     
    product.forEach(item=>{
        let {img,price,talla, id}=item
-    // creando contenedor
-    let card = document.createElement("div");
-    card.setAttribute("class", "card");
-     // Creando etiqueta img
-    let imagen = document.createElement("img");
-     imagen.setAttribute("src", img);
+      // creando contenedor
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
+
+      // Creando etiqueta img
+      const imagen = document.createElement("img");
+      imagen.setAttribute("src", img);
    
       //creando contenedor para talla y precio
-      let containerTP = document.createElement("div");
+      const containerTP = document.createElement("div");
    
-      // Creando etiqueta para talla y precio
-      let tallaje = document.createElement("span");
+      // Creando etiqueta para talla, precio y cantidad
+      const tallaje = document.createElement("span");
       tallaje.textContent = "Talla: " + talla;
       
-     let precio = document.createElement("span");
+      const precio = document.createElement("span");
       precio.textContent = "Precio: $" + price;
+
+      const containerCounter = document.createElement("div");
+      const counterText = document.createElement("span");
+      counterText.textContent = `En el carrito: `;
+
+      const counterValue = document.createElement("span");
+      counterValue.textContent = 0;
+
+
    
       // Añadiendo las equitas al contenedor
-      let button = document.createElement("button");
+      const button = document.createElement("button");
       button.setAttribute("id", id)
       button.textContent = "Agregar";
    
       // Añadiendo contenedor a la tabla
       card.appendChild(imagen);
+
       containerTP.appendChild(tallaje);
       containerTP.appendChild(precio);
+      containerCounter.appendChild(counterText);
+      containerCounter.appendChild(counterValue);
+      containerTP.appendChild(containerCounter)
       card.appendChild(containerTP)
+
       card.appendChild(button);
       container.appendChild(card);
+      
    })
    };

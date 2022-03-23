@@ -20,13 +20,13 @@
     align-items: center;
     position: fixed;
     font-family: 'DM Sans', sans-serif;
+    z-index: 9;
   }
   .headerNav > img {
     height: 80%;
   }
   nav {
     display: flex;
-  
   }
   .nav  a {
     color: white;
@@ -34,6 +34,34 @@
     padding-left: 20px;
     cursor: pointer;
     
+  }
+  .picture-medellin{
+    background-image: url("../imagenes/medallo.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+  }
+  .text-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+  } 
+  
+  .text-center h1{
+    font-family: 'Alfa Slab One', 'cursive' ;
+    font-size: 3em;
+  }
+  .filter{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0,0, 0.67);
   }
   .categoría {
     color: white;
@@ -70,8 +98,7 @@
     background-color: white;
     box-shadow: 1px 7px 25px rgb(0, 0, 0, 0.8);
     transition: all 500ms ease;
-    position: relative;
-    margin-top: 3%;
+    margin-top: 6%;
   }
   .header-modal {
     padding: 10px;
@@ -80,7 +107,7 @@
     text-align: center;
     font-family: 'Alfa Slab One', cursive;
     font-size: 30px;
-    
+    position: relative;
   }
   .header-modal > span {
     position: absolute;
@@ -106,6 +133,16 @@
   }
   main h2 {
     margin: auto;
+  }
+  .card {
+
+  }
+  .counter-card {
+    height: 60px;
+    width: 60px;
+    right: -15px;
+    top: -15px;
+    border-radius: 50%;
   }
   footer {
     height: 10vh;
@@ -144,7 +181,6 @@
     margin-right: 5%; 
     font-size: 100%;
     font-weight: bold;
-   
   }
 
   @media (max-width:800px){
@@ -184,7 +220,10 @@
       flex-direction: column;
       padding:15px;
       margin:10px ;
-    
+    }
+    .counter-card {
+      height: 20px;
+      width: 20px;
     }
     .card img{
   
@@ -193,15 +232,17 @@
       padding-bottom: 5%;
       
     }
-    .card > div{
-      display: flex;
-      justify-content: space-around;
+    .card > div {
+      /* display: flex;
+      justify-content: space-around; */
       padding-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
     
     }
     .card span{
       font-family: 'DM Sans', sans-serif;
-      padding: 10%;
+      padding: 5px;
       
       font-size: 150%;
     }
@@ -211,7 +252,6 @@
       background-color: #474536;
       color: white;
       border-radius: 5px;
-      margin-left: 30%;
       font-size: 120%;
       font-family: 'DM Sans', sans-serif;
       
@@ -261,7 +301,7 @@
       display: flex;
       flex-wrap: wrap;
       margin: auto;
-      width:80%;
+      /* width:80%; */
     }
   
     .card {
@@ -291,8 +331,8 @@
       
     }
     .card > div{
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      grid-template-columns: 1fr;
     
     }
     .card span{

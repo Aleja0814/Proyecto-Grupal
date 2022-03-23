@@ -15,28 +15,28 @@ export const menuFiltrar = (menuFiltrar, table, h2)=>{
       table.innerHTML="";
       table.style.display = "block"
       showProduct(pantalon, table)
-      h2.style.display = "none"
+
     } else {
       table.style.display = "none"
       if(e.target.classList.value == "Pantaloneta"){
         table.innerHTML=""
         table.style.display = "block"
         showProduct(pantaloneta, table)
-        h2.style.display = "none"
+  
       } else {
         table.style.display = "none"
         if(e.target.classList.value == "Camisa"){
           table.innerHTML=""
           table.style.display = "block"
           showProduct(camisa, table)
-          h2.style.display = "none"
+    
         } else{
           table.style.display = "none"
           if(e.target.classList.value == "Gorra"){
             table.innerHTML=""
             table.style.display = "block"
             showProduct(gorra, table)
-            h2.style.display = "none"
+      
           }
         }
      
