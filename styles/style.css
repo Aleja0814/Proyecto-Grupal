@@ -7,7 +7,6 @@
   body {
     width: 100%;
     position: relative;
-    padding-bottom: 100px ;
     min-height: 100vh;
   }
   /* HEADER */
@@ -40,8 +39,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 90vh;
     position: relative;
+    padding-top: 10vh;
   }
   .text-center{
     display:flex;
@@ -98,7 +98,7 @@
     background-color: white;
     box-shadow: 1px 7px 25px rgb(0, 0, 0, 0.8);
     transition: all 500ms ease;
-    margin-top: 6%;
+    margin-top: 25%;
   }
   .header-modal {
     padding: 10px;
@@ -125,7 +125,6 @@
 
 /* MAIN  */
   main {
-    padding-top: 12vh;
     display:flex;
     flex-direction: column;
      font-family: 'DM Sans', sans-serif;
@@ -187,7 +186,6 @@
     body {
       background-color: #cfc219;
     }
-
     nav {
       position: relative;
     }
@@ -209,7 +207,7 @@
       display: block;
       margin: auto;
       width:80%;
-     
+      padding: 90px 0;
     }
   
     .card{
@@ -233,8 +231,6 @@
       
     }
     .card > div {
-      /* display: flex;
-      justify-content: space-around; */
       padding-bottom: 10px;
       display: grid;
       grid-template-columns: 1fr;
@@ -243,7 +239,6 @@
     .card span{
       font-family: 'DM Sans', sans-serif;
       padding: 5px;
-      
       font-size: 150%;
     }
     .card button{
@@ -262,7 +257,6 @@
   @media (min-width:801px){
     body{
       background-color: #cfc219;
-      /* height: 100vh; */
     }
     
     nav {
@@ -286,6 +280,10 @@
     .menu-filtrar  a:hover {
       color:#cfc219; 
     }
+    .container-modal {
+      margin-top: 6%;
+      height: 450px;
+    }
     #carrito-modal:hover{
       color: #cfc219;
     }
@@ -301,7 +299,7 @@
       display: flex;
       flex-wrap: wrap;
       margin: auto;
-      /* width:80%; */
+      margin-top: 10vh;
     }
   
     .card {

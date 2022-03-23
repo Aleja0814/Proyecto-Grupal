@@ -26,15 +26,14 @@ export let showProduct = (product,container)=>{
       const containerCounter = document.createElement("div");
       const counterText = document.createElement("span");
       counterText.textContent = `En el carrito: `;
-
+      
       const counterValue = document.createElement("span");
+      counterValue.setAttribute("id", `counter-card-${id}`)
       counterValue.textContent = 0;
 
-
-   
-      // Añadiendo las equitas al contenedor
+      // Creando etiqueta Button 
       const button = document.createElement("button");
-      button.setAttribute("id", id)
+      button.setAttribute("id", `button-${id}`)
       button.textContent = "Agregar";
    
       // Añadiendo contenedor a la tabla

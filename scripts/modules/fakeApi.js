@@ -1,4 +1,4 @@
-export const getData =  async (url) => {
+export const fakeApi =  async (url) => {
     let response = await fetch(url);
     let data = await response.json();
 

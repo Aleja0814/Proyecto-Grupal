@@ -1,8 +1,6 @@
 import { menuProductos } from "./modules/menuProductos.js";
 import { menuFiltrar } from "./modules/menuFiltrar.js";
 import { addCarrito } from "./modules/addCarrito.js";
-import { menuFiltrarCarrito } from "./modules/menuFiltrar.js";
-import { addProductos } from "./modules/addProducts.js" 
 import { counterTable } from "./modules/counterTable.js";
 
 // SIRVE PARA DESPLEGAR EL MENU PRODUCTOS UBICADO EN EL HEADER
@@ -17,9 +15,8 @@ menuFiltrar(menuFiltrarInicio, table, picturesMedellin)
 
 // GUARDANDO INFORMACION EN EL SESSIONSTORAGE PARA LUEGO AÑADIR AL CARRITO 
 let tBody = document.getElementById("t-body");
-let arrCard = [];
 let cardNoRepeat = [];
-addCarrito(arrCard, cardNoRepeat, table, tBody)
+addCarrito(cardNoRepeat, table, tBody)
 
 // FUNCION DONDE PIDO INFORMACION DEL SESSIONSTORAGE PARA PINTAR LA TABLA 
 // addProductos(tBody, table)

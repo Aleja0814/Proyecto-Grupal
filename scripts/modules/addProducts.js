@@ -1,30 +1,27 @@
-export const addProductos = (tBody, counterValue)=>{
-  console.log(counterValue)
-  const carritoModal = document.getElementById("carrito-modal");
+export const addProductos = (tBody, counterValue, idCounterCard, objCard, cardNoRepeat)=>{
 
-    tBody.innerHTML = ""
-  let arrCards = JSON.parse(sessionStorage.getItem("cardNoRepeat"))
-  // console.log(arrCards)
-
-  // arrCards.filter(element => element.id !== )
-  arrCards.forEach((element, index) => {
+  let ids = objCard
     // Creando tr 
     const rowCarrito = document.createElement("tr");
+    rowCarrito.setAttribute("id", `row-${ids.id}`)
+    rowCarrito.classList.add("row-carrito")
 
     // Creando tds de imagen
     const tdImg = document.createElement("td");
     const imgCarrito = document.createElement("img");
-    imgCarrito.setAttribute("src", element.img);
+    imgCarrito.setAttribute("src", ids.img);
     tdImg.appendChild(imgCarrito)
     
 
     // Crando tds de Item
     const tdProduct = document.createElement("td");
-    tdProduct.textContent = `${element.type} de talla ${element.talla}`;
+    tdProduct.textContent = `${ids.type} de talla ${ids.talla}`;
 
     // creando tds de Cantidad 
     const tdCantidad = document.createElement("td"); 
-    tdCantidad.setAttribute("id", `counter-${element.id}`);
+    tdCantidad.setAttribute("id", ids.id);
+    tdCantidad.innerHTML = counterValue
+    
 
     // Creando tds de Acción
     const tdButtons = document.createElement("td");
@@ -37,8 +34,8 @@ export const addProductos = (tBody, counterValue)=>{
 
     // Creando tds  de Total
     const tdPrecio = document.createElement("td");
-    tdPrecio.setAttribute("id", `precio${index + 1}`)
-    tdPrecio.textContent = element.price;
+    tdPrecio.setAttribute("id", `precio${ids.id}`)
+    tdPrecio.textContent = ids.price;
 
     // Añadiendo todos los td al tr 
     rowCarrito.appendChild(tdImg);
@@ -48,8 +45,18 @@ export const addProductos = (tBody, counterValue)=>{
     rowCarrito.appendChild(tdPrecio);
 
     // Añadiendo al tBody los rows
-    tBody.appendChild(rowCarrito)
+    /////////////
+    // console.log(arrCap)
+    // console.log(arrCap.length === 0)
+    
+    
+        const fragment = document.createDocumentFragment();
+        fragment.appendChild(rowCarrito);
+        tBody.appendChild(fragment)
 
-  });
 
+
+
+
+  
 }

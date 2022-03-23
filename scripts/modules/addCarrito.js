@@ -1,49 +1,34 @@
 import { addProductos } from "./addProducts.js";
+// import { fakeApi } from "./fakeApi.js";
 import { products } from "./products.js";
 
-export const addCarrito = (arrCard, cardNoRepeat, table, tBody)=>{
+export const addCarrito = (cardNoRepeat, table, tBody) => {
   // Escuchando el click en el boton de la carta por medio de la tabla (mala practica)
-  table.addEventListener("click", (e)=>{
-
-    // let tdCantidad = e.path[3].childNodes[3].childNodes[1].childNodes[7].childNodes[1].childNodes;
+  table.addEventListener("click", async (e)=>{
+    // let products = await fakeApi("http://localhost:4000/productos")
     // capturando contador ubicado en la tarjeta
     const counterSpan = e.path[1].childNodes[1].childNodes[2].childNodes[1];
-    const counterValue = Number(counterSpan.innerText)
+
+    let counterValue = 0;
     
-    let idValueCard = e.target.attributes.id.value;
-    let objCard = products.find(element => element.id == idValueCard);
-    arrCard.push(objCard);
-    
+    // let idCounterCard = counterSpan.attributes[0].value;
+    let idCounterCard = counterSpan.attributes[0].value;
+
+    let objCard = products.find(element => `counter-card-${element.id}` == idCounterCard);
+
     // Sacando los elementos repetidos de arrCard
-    for(let i = 0; i < arrCard.length; i++) {
-      const noRepeat = arrCard[i];
-      if(!cardNoRepeat.includes(arrCard[i])) {
-        cardNoRepeat.push(noRepeat);    
-      } 
-      
-    }
-    loadStorage(cardNoRepeat)
 
-    addProductos(tBody, counterValue)
+    if(!cardNoRepeat.includes(objCard) || cardNoRepeat.length === 0) {
+      cardNoRepeat.push(objCard);
+      counterValue = Number(counterSpan.innerText) + 1
+      counterSpan.innerHTML = counterValue;
+      addProductos(tBody, counterValue, idCounterCard, objCard, cardNoRepeat);
 
-
-    // let tdCantidad = document.getElementById(`counter-${objCard.id}`)
-    // tdCantidad.innerHTML = counterValue + 1
-
-    // Añadiendo una unidad al contador en cada click
-    counterSpan.innerHTML = counterValue + 1;
-    // .innerHTML = counterValue + 1;
-    // console.log(tdCantidad)
-
-  
-    // loadStorage(cardNoRepeat)
-    
+    } else {
+        counterSpan.innerHTML = Number(counterSpan.innerText) + 1;
+        let td = document.getElementById(objCard.id);
+        td.innerHTML = Number(counterSpan.innerText);
+    }  
   })
 
 };
-
-// AÑADIENDO ARRAY AL SESSIONSTORAGE 
-function loadStorage (def) {
-
-  sessionStorage.setItem("cardNoRepeat", JSON.stringify(def))
-}

@@ -1,6 +1,8 @@
 import { showProduct }  from "./showProduct.js";
 import { products } from "./products.js";
 
+
+
 let pantalon = products.filter(item => item.type == "Pantalon");
 let pantaloneta = products.filter(item => item.type == "Pantaloneta");
 let camisa = products.filter(item => item.type == "Camisa");
