@@ -43,7 +43,9 @@ margin-left: 90px;
   button{
     display: none;
   }
-
+  .container-counter {
+    display: none;
+  }
   .inCart{
     display: none;
   }

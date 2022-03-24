@@ -1,4 +1,4 @@
-export const addProductos = (tBody, counterValue, idCounterCard, objCard, cardNoRepeat)=>{
+export const addProductos = (tBody, counterValue, objCard)=>{
 
   let ids = objCard
     // Creando tr 
@@ -21,7 +21,6 @@ export const addProductos = (tBody, counterValue, idCounterCard, objCard, cardNo
     const tdCantidad = document.createElement("td"); 
     tdCantidad.setAttribute("id", ids.id);
     tdCantidad.innerHTML = counterValue
-    
 
     // Creando tds de Acción
     const tdButtons = document.createElement("td");
@@ -34,8 +33,9 @@ export const addProductos = (tBody, counterValue, idCounterCard, objCard, cardNo
 
     // Creando tds  de Total
     const tdPrecio = document.createElement("td");
-    tdPrecio.setAttribute("id", `precio${ids.id}`)
-    tdPrecio.textContent = ids.price;
+    tdPrecio.setAttribute("id", `precio-${ids.id}`)
+    tdPrecio.textContent = ids.price 
+    
 
     // Añadiendo todos los td al tr 
     rowCarrito.appendChild(tdImg);
@@ -43,12 +43,6 @@ export const addProductos = (tBody, counterValue, idCounterCard, objCard, cardNo
     rowCarrito.appendChild(tdCantidad);
     rowCarrito.appendChild(tdButtons);
     rowCarrito.appendChild(tdPrecio);
-
-    // Añadiendo al tBody los rows
-    /////////////
-    // console.log(arrCap)
-    // console.log(arrCap.length === 0)
-    
     
         const fragment = document.createDocumentFragment();
         fragment.appendChild(rowCarrito);

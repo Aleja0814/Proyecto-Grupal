@@ -2,7 +2,7 @@
 export let showProduct = (product,container)=>{
     
     
-   product.forEach((item, index)=>{
+   product.forEach((item)=>{
        let {img,price,talla, id}=item
       // creando contenedor
       const card = document.createElement("div");
@@ -24,6 +24,7 @@ export let showProduct = (product,container)=>{
       precio.textContent = "Precio: $" + price;
       // cantidad
       const containerCounter = document.createElement("div");
+      containerCounter.classList.add("container-counter")
       const counterText = document.createElement("span");
       counterText.textContent = `En el carrito: `;
       

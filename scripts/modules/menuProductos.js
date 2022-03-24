@@ -2,6 +2,7 @@ import { type } from "./products.js"
 
 export let menuProductos=(menuFiltrar,filtrar)=>{
     let openclose = true
+    
     filtrar.addEventListener("click", function() {
     
       if (openclose) {

@@ -137,7 +137,9 @@
 
   }
 
-
+  .total-carrito {
+    font-size: 1.5em;
+  }
 /* MAIN  */
   main {
     display:flex;
